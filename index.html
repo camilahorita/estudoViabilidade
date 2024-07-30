@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Viagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Escolha sua Viagem</h2>
+        <div class="radio-group">
+            <div>
+                <input type="radio" id="viagemDisney" name="viagem" value="viagemDisney" checked>
+                <label for="viagemDisney"><b>Viagem Disney</b></label>
+            </div>
+            <div>
+                <input type="radio" id="intercambioNYC" name="viagem" value="intercambioNYC">
+                <label for="intercambioNYC"><b>Intercâmbio NYC</b></label>
+            </div>
+            <div>
+                <input type="radio" id="anoNovoJericoacoara" name="viagem" value="anoNovoJericoacoara">
+                <label for="anoNovoJericoacoara"><b>Ano Novo Jericoacoara</b></label>
+            </div>
+            <div>
+                <input type="radio" id="feriasParis" name="viagem" value="feriasParis">
+                <label for="feriasParis"><b>Férias em Paris</b></label>
+            </div>
+        </div>
+        <div>
+          <button onclick="mostrarDados()">Mostrar os Dados</button>
+        </div>
+        <div id="resultado" class="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
