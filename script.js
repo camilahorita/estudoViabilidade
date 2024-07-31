@@ -1,6 +1,8 @@
 function mostrarDados() {
   const resultadoDiv = document.getElementById('resultado');
   const radios = document.getElementsByName('viagem');
+
+  resultadoDiv.style.display = 'block';
   
   let selecionado = null;
   radios.forEach(radio => {
@@ -8,7 +10,6 @@ function mostrarDados() {
           selecionado = radio.value;
       }
   });
-  
   const dados = {
       viagemDisney: {
           emprestimo: {
@@ -24,7 +25,7 @@ function mostrarDados() {
           poupando: {
               taxaJuros: '0% a.m.',
               pagamentoMensal: 'R$ 3.298,83',
-              custoTotal: 'R$ 39.586'
+              custoTotal: 'R$ 39.586,00'
           }
       },
       intercambioNYC: {
@@ -41,7 +42,7 @@ function mostrarDados() {
           poupando: {
               taxaJuros: '0% a.m.',
               pagamentoMensal: 'R$ 3.013,66',
-              custoTotal: 'R$ 36.164'
+              custoTotal: 'R$ 36.164,00'
           }
       },
       anoNovoJericoacoara: {
@@ -58,7 +59,7 @@ function mostrarDados() {
           poupando: {
               taxaJuros: '0% a.m.',
               pagamentoMensal: 'R$ 1.183,58',
-              custoTotal: 'R$ 14.203'
+              custoTotal: 'R$ 14.203,00'
           }
       },
       feriasParis: {
@@ -75,7 +76,7 @@ function mostrarDados() {
           poupando: {
               taxaJuros: '0% a.m.',
               pagamentoMensal: 'R$ 2.230,83',
-              custoTotal: 'R$ 26.770'
+              custoTotal: 'R$ 26.770,00'
           }
       }
   };
@@ -84,6 +85,7 @@ function mostrarDados() {
   
   resultadoDiv.innerHTML = `
       <h2>${capitalizeFirstLetter(selecionado)}</h2>
+      <h3 class="prazo"> Prazo de 12 meses </h3>
       <div class="column-container">
           <div class="column">
               <h3>Empréstimo</h3>
