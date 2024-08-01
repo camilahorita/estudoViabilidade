@@ -12,6 +12,7 @@ function mostrarDados() {
   });
   const dados = {
       viagemDisney: {
+        nome: 'Viagem Disney',
           emprestimo: {
               taxaJuros: '5,5% a.m.',
               pagamentoMensal: 'R$ 4.466,31',
@@ -29,6 +30,7 @@ function mostrarDados() {
           }
       },
       intercambioNYC: {
+        nome: 'Intercâmbio NYC',
           emprestimo: {
               taxaJuros: '5,5% a.m.',
               pagamentoMensal: 'R$ 4.080,22',
@@ -46,6 +48,7 @@ function mostrarDados() {
           }
       },
       anoNovoJericoacoara: {
+        nome: 'Ano Novo Jericoacoara',
           emprestimo: {
               taxaJuros: '5,5% a.m.',
               pagamentoMensal: 'R$ 1.602,46',
@@ -63,6 +66,7 @@ function mostrarDados() {
           }
       },
       feriasParis: {
+        nome: 'Férias em Paris',
           emprestimo: {
               taxaJuros: '5,5% a.m.',
               pagamentoMensal: 'R$ 3.020,34',
@@ -84,7 +88,7 @@ function mostrarDados() {
   const dadosSelecionados = dados[selecionado];
   
   resultadoDiv.innerHTML = `
-      <h2>${capitalizeFirstLetter(selecionado)}</h2>
+      <h2>${dadosSelecionados.nome}</h2>
       <h3 class="prazo"> Prazo de 12 meses </h3>
       <div class="column-container">
           <div class="column">
